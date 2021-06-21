@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IMG / IMC</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <style>
+        .tabs {
+            margin-bottom: 50px;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        @media only screen and (min-width: 601px) {
+            .container {
+                width: 85%;
+            }
+        }
+
+        @media only screen and (min-width: 993px) {
+            .container {
+                width: 70%;
+            }
+        }
+
+        #display_img{
+            
+        }
+    </style>
+</head>
+
+<body class="container center-align">
+    <h3 style="margin-top: 50px;">Calcul IMG / IMC</h3>
+    <div class="row ">
+        <div class="col s12" style="margin-top: 50px;">
+            <ul class="tabs">
+                <li class="tab col s6"><a href="#inbox">IMC</a></li>
+                <li class="tab col s6"><a href="#sent">IMG</a></li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 20px;" id="inbox" class="col s12">
+            <h5>IMC</h5>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="taille" type="text" class="validate">
+                            <label for="taille">Taille (ex: 1.80 )</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="poids" type="text" class="validate">
+                            <label for="poids">Poids (ex: 75 )</label>
+                        </div>
+                    </div>
+                </form>
+                <button id="calcul" class="waves-effect waves-light btn">Calculez</button>
+            </div>
+            <h3 id="display" class="col s12"></h3>
+        </div>
+        <div id="sent" class="col s12">
+            <h5>IMG</h5>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="age" type="text" class="validate">
+                            <label for="age">Age</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="imc" type="text" class="validate">
+                            <label for="imc">IMC</label>
+                        </div>
+                    </div>
+                    <p>
+                        <input class="sexe" type="checkbox" id="homme" value="1" />
+                        <label for="homme">Homme</label>
+                    </p>
+                    <p>
+                        <input class="sexe" type="checkbox" id="femme" value="0" />
+                        <label for="femme">Femme</label>
+                    </p>
+                </form>
+                <button id="calcul_img" class="waves-effect waves-light btn">Calculez</button>
+            </div>
+            <h3 id="display_img" class="col s12"></h3>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
